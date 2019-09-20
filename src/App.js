@@ -34,6 +34,7 @@ class App extends Component {
   async componentDidUpdate(prevProps, prevState) {
     const { data } = await getTodos();
     this.setState({ todos: data });
+    toast.warn("something has changed");
   }
 
   handleChange = e => {
