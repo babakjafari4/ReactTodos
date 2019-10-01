@@ -23,7 +23,6 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/todos" component={ToDos} />
           <Route path="/dics" component={Dictionary} />
-          {/* <Route path="/todo" component={ToDos} />
           <Route exact path="/" component={App} /> */}
         </Switch>
       </BrowserRouter>
