@@ -23,9 +23,7 @@ class Dictionary extends Component {
   };
   render() {
     const { data: allData, pageSize, currentPage } = this.state;
-
     const data = paginate(allData, currentPage, pageSize);
-
     return (
       <React.Fragment>
         <Home />
@@ -55,7 +53,7 @@ class Dictionary extends Component {
             </tbody>
           </table>
           <Pagination
-            itemCount={data && data.length}
+            itemCount={allData && allData.length}
             pageSize={pageSize}
             onPageChange={page => this.handlePageChange(page)}
             currentPage={currentPage}
