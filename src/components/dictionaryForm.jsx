@@ -1,6 +1,8 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
+import { postDictionary } from "../services/dictionaryService";
+import { toast } from "react-toastify";
 
 class DictionaryForm extends Form {
   state = {
@@ -16,10 +18,14 @@ class DictionaryForm extends Form {
       .required()
       .min(3)
   };
-
   doSubmit = () => {
     //call the server
-    console.log("submitted");
+
+    const originalData = { ...this.state.data };
+    postDictionary(originalData);
+    toast.success("اطلاعات وارد شده با موفقیت ثبت گردید");
+    const data = { english: "", turkish: "", persian: "" };
+    this.setState({ data });
   };
 
   render() {

@@ -35,3 +35,7 @@
 .clickable {
   cursor: pointer;
 }
+
+.Toastify__toast-body {
+  font-family: "IRANSans";
+}
