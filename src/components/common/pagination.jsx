@@ -15,7 +15,7 @@ const Pagination = props => {
   return (
     <nav aria-label="Page navigation">
       <ul className="pagination">
-        <li className={pageLinkClassName(2)}>
+        {/* <li className={pageLinkClassName(2)}>
           <a
             onClick={() => onPageChange("prev")}
             className="page-link"
@@ -23,7 +23,7 @@ const Pagination = props => {
           >
             Previous
           </a>
-        </li>
+        </li> */}
         {pages.map(page => {
           return (
             <li key={page} className={pageLinkClassName(page)}>
@@ -37,7 +37,7 @@ const Pagination = props => {
             </li>
           );
         })}
-        <li className={pageLinkClassName("next")}>
+        {/* <li className={pageLinkClassName("next")}>
           <a
             onClick={() => onPageChange("next")}
             className="page-link"
@@ -45,7 +45,7 @@ const Pagination = props => {
           >
             Next
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
